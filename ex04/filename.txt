@@ -1,3 +1,5 @@
 blablblabla
 chaine de caracs a remplacer
+chaine de caracs a remplacer
 blablabla2
+chaine de caracs a remplacer

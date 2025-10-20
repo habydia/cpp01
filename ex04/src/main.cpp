@@ -7,17 +7,21 @@
 
 int	main(int argc, char **argv)
 {
-	Sed mySed("filename.txt", "filename.txt.replace");
-
+	
 	if (argc == 4)
 	{
+		std::string filename = argv[1];
 		std::string s1 = argv[2];
 		std::string s2 = argv[3];
+		std::string outfile_name = std::string(argv[1]) + ".replace";
+
+		//constructor, ouvrir le fichier source, creer sa copie
+		Sed mySed(filename, outfile_name);
 		size_t pos = 0;
 		size_t s1_len = s1.length();
 
-		mySed.ft_replace(pos, s1_len, s1, s2, mySed._input_file,
-			mySed._output_file);
+		//fonction qui copie filename dans outfile et recherche s1 dans outfile et remplace par s2
+		mySed.ft_replace(pos, s1_len, s1, s2, mySed.input_file, mySed.output_file);
 	}
 	else
 	{
