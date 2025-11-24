@@ -33,12 +33,12 @@ std::string Sed::ft_replace(size_t pos, size_t s1_len, std::string &s1,
 	{
 		pos = 0;
 		pos = line.find(s1, pos);
-	while (pos != std::string::npos)
-	{
-		line.erase(pos, s1_len);
-		line.insert(pos, s2);
-		pos = line.find(s1, pos + s2.length());
-	}
+		while (pos != std::string::npos)
+		{
+			line.erase(pos, s1_len);
+			line.insert(pos, s2);
+			pos = line.find(s1, pos + s2.length());
+		}
 	output << line << std::endl;
 	}
 	return (line);
