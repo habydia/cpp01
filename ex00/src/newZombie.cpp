@@ -7,8 +7,3 @@ Zombie	*newZombie(std::string name)
 	new_zombie = new Zombie(name);
 	return (new_zombie);
 }
-
-void Zombie::announce(void)
-{
-	std::cout << name << ": BraiiiiiiinnnzzzZ..." << std::endl;
-}

@@ -13,6 +13,11 @@ int	main(int argc, char **argv)
 		std::string filename = argv[1];
 		std::string s1 = argv[2];
 		std::string s2 = argv[3];
+		if (s1.empty())
+		{
+			std::cerr << "Error: s1 cannot be empty" << std::endl;
+			return (1);
+		}
 		std::string outfile_name = std::string(argv[1]) + ".replace";
 
 		//constructor, ouvrir le fichier source, creer sa copie

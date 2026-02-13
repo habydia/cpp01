@@ -10,6 +10,7 @@ int	main(void)
 
 	std::cout << "Address of brain: " << &brain << std::endl;
 	std::cout << "Address held by stringPTR: " << stringPTR << std::endl;
+	std::cout << "Address held by stringRef: " << &stringRef << std::endl;
 
 	std::cout << "Value of brain: " << brain << std::endl;
 	std::cout << "Value pointed to by stringPTR: " << *stringPTR << std::endl;
