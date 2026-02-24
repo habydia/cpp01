@@ -3,7 +3,7 @@
 // constructor
 Weapon::Weapon(std::string type)
 {
-	this->type = type;
+	this->_type = type;
 }
 
 // destructor
@@ -14,13 +14,13 @@ Weapon::~Weapon()
 // getType implementation
 const std::string &Weapon::getType() const
 {
-	return (type);
+	return (_type);
 }
 
 // setType implementation
 void Weapon::setType(std::string newType)
 {
-	type = newType;
+	_type = newType;
 }
 
 // fonction qui change le type de l'arme selon humanA, humanB

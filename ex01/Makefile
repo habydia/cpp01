@@ -1,15 +1,13 @@
-CC = g++
+CC = c++
 CFLAGS = -Wall -Wextra -Werror -Iinclude -std=c++98
 
 SRC = src/main.cpp \
 	  src/Zombie.cpp \
 	  src/ZombieHorde.cpp 
-	  
-HEADER = include/ZombieHorde.hpp
 
 OBJ_DIR = obj
-OBJ = $(SRC:%.c=$(OBJ_DIR)/%.o)
-NAME = ZombieHorde
+OBJ = $(SRC:%.cpp=$(OBJ_DIR)/%.o)
+NAME = Braiiinzz
 
 all: $(NAME)
 
@@ -20,10 +18,10 @@ $(OBJ_DIR) :
 	@mkdir -p $(OBJ_DIR)
 
 force :
-%.o: %.c $(HEADER) Makefile
+%.o: %.cpp Makefile
 	$(CC) $(CFLAGS) -O3 -c $< -o $@
 
-$(OBJ_DIR)/%.o: %.c Makefile | $(OBJ_DIR)
+$(OBJ_DIR)/%.o: %.cpp Makefile | $(OBJ_DIR)
 	mkdir -p $(dir $@)
 	$(CC) $(CFLAGS) -O3 -c $< -o $@
 
@@ -36,3 +34,4 @@ fclean: clean
 re: fclean all
 
 .PHONY: all clean fclean re
+
